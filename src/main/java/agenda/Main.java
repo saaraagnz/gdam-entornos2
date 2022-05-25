@@ -17,7 +17,22 @@ import java.util.ArrayList;
  */
 public class Main {
 
-  
+    public static void ListaAgenda(Agenda a){    
+        ArrayList<Contacto> Listado = new ArrayList<>();
+        Listado = a.getContactos();
+        System.out.print("AGENDA: ");
+        System.out.print(a.getnombreAgenda(a));
+        System.out.println("\t\tNum.Contactos:"+Listado.size());
+        System.out.format("%-24s%-15s%-15s\n", "eMail","Teléfono","Nombre");
+        System.out.println("-----------------------------------------------------");
+        
+        for (Contacto c : Listado){
+            System.out.format("%-24s%-15s%-15s\n",c.getEmail(),c.getTelefono(),c.getNombre());
+        }
+        
+        System.out.println("-----------------------------------------------------");
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -37,7 +52,7 @@ public class Main {
             }
         System.out.println("-- Listando los contactos añadidos ---");
            System.out.println(Lista.getContactos().toString());
-           //ListaAgenda(Lista);
+           ListaAgenda(Lista);
         System.out.println("-- Eliminando contacto con email_1 ...");
             Lista.eliminarContacto("email_1");
         System.out.println("-- Buscando contacto2  ..."); 
@@ -51,5 +66,8 @@ public class Main {
       
         System.out.println("Cerrando la Agenda!");
     }
-    }
+
+       
+    
+}
     
