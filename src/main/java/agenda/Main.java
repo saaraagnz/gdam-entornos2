@@ -24,7 +24,7 @@ public class Main {
     public static void main(String[] args) {
        Contacto c1,c2,c3;
         System.out.println("Practica5.- Pruebas Junit");
-        Agenda Lista = new Agenda();
+        Agenda Lista = new Agenda("TEST");
         Contacto contacto1 = new Contacto("email_1","555 555 551","empleado_1");
         Contacto contacto2 = new Contacto("rmsces2122@gmail.com","555 555 552","Ramón");
         //Contacto contacto2 = new Contacto(null,null,null);
